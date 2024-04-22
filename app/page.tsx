@@ -13,8 +13,6 @@ export default async function Home() {
     .then((entry) => {
       return entry.fields.content;
     });
-  console.log("here");
-  console.log(content);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="flex flex-col justify-center items-center">
