@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { INeighborEntry, client } from "../lib/contentful";
-import { INeighbors, INeighborsFields } from "@/@types/generated/contentful";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { client } from "../lib/contentful";
+import { INeighborsFields } from "@/@types/generated/contentful";
 
 export default async function Neighbors() {
   const vecinos = await client
-    .getEntries<INeighborEntry[]>({ content_type: "neighbors" })
+    .getEntries<INeighborFields[]>({ content_type: "neighbors" })
     .then((response) => {
       console.log(response.items);
       return response.items.map((entry) => entry.fields as INeighborsFields);
