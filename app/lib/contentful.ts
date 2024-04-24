@@ -1,4 +1,4 @@
-import { IStaticPagesFields } from "@/@types/generated/contentful";
+import { INeighbors, INeighborsFields } from "@/@types/generated/contentful";
 import * as contentful from "contentful";
 
 export const client = contentful.createClient({
@@ -6,10 +6,3 @@ export const client = contentful.createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
   host: process.env.CONTENTFUL_HOST || "cdn.contentful.com",
 });
-
-export type StaticPageEntrySkeleton = {
-  contentTypeId: "staticPages";
-  fields: IStaticPagesFields;
-};
-
-export type StaticPageEntry = contentful.Entry<StaticPageEntrySkeleton>;

@@ -9,6 +9,15 @@ export interface INeighborsFields {
 
   /** Door */
   door?: number | undefined;
+
+  /** Main Photo */
+  mainPhoto?: Asset | undefined;
+
+  /** Apartment Photos */
+  apartmentPhotos?: Asset[] | undefined;
+
+  /** Description */
+  description?: Document | undefined;
 }
 
 /** The neighbors who live here */
@@ -30,42 +39,9 @@ export interface INeighbors extends Entry<INeighborsFields> {
   };
 }
 
-export interface IStaticPagesFields {
-  /** Title */
-  title?: string | undefined;
+export type CONTENT_TYPE = "neighbors";
 
-  /** priority */
-  priority: number;
-
-  /** Paragraphs */
-  paragraphs: Document;
-
-  /** Background Images */
-  backgroundImages?: Asset[] | undefined;
-}
-
-/** These are full pages on the website that are filled with nothing but the content within this model. It's mainly going to be used for the "History" page, but there might be other pages that use this in the future. In general though, most pages will be defined in the codebase and use other Content Types for the content */
-
-export interface IStaticPages extends Entry<IStaticPagesFields> {
-  sys: {
-    id: string;
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    locale: string;
-    contentType: {
-      sys: {
-        id: "staticPages";
-        linkType: "ContentType";
-        type: "Link";
-      };
-    };
-  };
-}
-
-export type CONTENT_TYPE = "neighbors" | "staticPages";
-
-export type IEntry = INeighbors | IStaticPages;
+export type IEntry = INeighbors;
 
 export type LOCALE_CODE = "ca-ES" | "es-ES";
 
