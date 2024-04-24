@@ -1,3 +1,5 @@
+import ButtonLink from "./components/buttonLink";
+
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center w-full gap-6 text-xl">
@@ -49,6 +51,9 @@ export default function Home() {
         de los primeros ascensores del barrio el Carme!
       </div>
       <div className="h-[500px] w-full bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/doc3.png')]"></div>
+      <div className="h-[300px] flex flex-col items-center justify-center gap-4">
+        <ButtonLink text="Conocer a los vecinos" href="/vecinos" />
+      </div>
     </div>
   );
 }
