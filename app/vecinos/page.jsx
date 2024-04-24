@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { client } from "../lib/contentful";
-import { INeighborsFields } from "@/@types/generated/contentful";
 
 export default async function Neighbors() {
   const vecinos = await client
-    .getEntries<INeighborsFields[]>({ content_type: "neighbors" })
+    .getEntries({ content_type: "neighbors" })
     .then((response) => {
       console.log(response.items);
-      return response.items.map((entry) => entry.fields as INeighborsFields);
+      return response.items.map((entry) => entry.fields);
     });
   return (
     <div className="flex flex-col justify-center items-center w-full gap-6 text-xl pt-10">
