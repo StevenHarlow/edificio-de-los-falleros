@@ -4,7 +4,7 @@ import { INeighborsFields } from "@/@types/generated/contentful";
 
 export default async function Neighbors() {
   const vecinos = await client
-    .getEntries<INeighborFields[]>({ content_type: "neighbors" })
+    .getEntries<INeighborsFields[]>({ content_type: "neighbors" })
     .then((response) => {
       console.log(response.items);
       return response.items.map((entry) => entry.fields as INeighborsFields);
