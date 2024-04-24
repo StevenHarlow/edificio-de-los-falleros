@@ -37,8 +37,11 @@ export interface IStaticPagesFields {
   /** priority */
   priority: number;
 
-  /** Content */
-  content: Document;
+  /** Paragraphs */
+  paragraphs: Document;
+
+  /** Background Images */
+  backgroundImages?: Asset[] | undefined;
 }
 
 /** These are full pages on the website that are filled with nothing but the content within this model. It's mainly going to be used for the "History" page, but there might be other pages that use this in the future. In general though, most pages will be defined in the codebase and use other Content Types for the content */
