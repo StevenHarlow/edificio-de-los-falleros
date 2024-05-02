@@ -1,57 +1,78 @@
 import ButtonLink from "./components/buttonLink";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center w-full gap-6 text-xl">
-      <div className="h-[calc(100vh-260px)] max-w-[1000px] flex items-center">
-        ¿Sabías que en el corazón del Carmen existe un edificio promovido y casi
-        construido por los vecinos, falleros, y la parroquia del Carme? La riada
-        de 1957 destruyó muchas de las viviendas más bajas de nuestro barrio.
-        Tras esta catástrofe, y ayudado por la parroquia de la santísima cruz,
-        vecinos, falleros de Na Jordana, y la propia parroquia empezaron a
-        organizarse y consiguieron construir un edificio con fines sociales en
-        unos terrenos ubicados en lo que hoy es Na Jordana 32, el Edificio de
-        los Falleros.
+      <div className="py-20 max-w-[1000px] flex flex-col gap-10 justify-center items-center">
+        <p>
+          En el barrio del Carmen resiste un edificio testigo de la valencia que
+          no llegó a ser. La Valencia moderna y esponjada de Goerlich que nunca
+          llegó, y que planeaba alargar la avenida del Oeste hasta el río Túria,
+          destruyendo en aras de la modernidad y la salubridad, gran parte del
+          barrio del Carmen y del mercado.
+        </p>
+        <p>
+          La supuesta modernización del entramado medieval del centro histórico
+          nunca llegó a realizarse debido a la negativa de varias familias
+          adineradas cercanas al mercado central. No obstante, y tras las
+          pérdidas que supuso la riada de 1957, 20 familias del barrio se
+          organizaron para construir una vivienda digna e "higiénica" liderados
+          por la parroquia de la Santísima Cruz, también conocida como iglesia
+          del Carmen. Esta nueva vivienda se alineó según la reglamentación y
+          planos urbanísticos de entonces y constituyó en el barrio del Carmen
+          un hito de modernidad y de cohesión del barrio.
+        </p>
+        <div className="flex gap-10">
+          <Image
+            src="/falla.jpeg"
+            alt="falla del barrio"
+            width={300}
+            height={300}
+          />
+          <Image src="/flood.jpeg" alt="mucho agua" width={300} height={300} />
+        </div>
       </div>
       <div className="h-[500px] w-full bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/falleros.jpg')]"></div>
-      <div className="h-[calc(100vh-260px)] max-w-[1000px] flex items-center">
-        El Edificio de los Falleros llama la atención por su altura, que
-        sobresale de las edificaciones de la calle Na Jordana. Pero... ¿porque
-        de esta altura? Debemos de remontarnos a la década de los 50 cuando el
-        Arquitecto Mayor del Ayuntamiento de Valencia, Javier Goerlich Lleó,
-        presentó un plan de reforma interior del Barrio del Carmen, cuyo plano,
-        sin firma ni fecha, parece proceder de los años 30, se conserva en la
-        sección Gran Valencia del Archivo Histórico de la Generalitat. Este plan
-        consistia en el esponjamiento del trazado medieval del barrio del Carme
-        y la prolongación de la avenida del oeste hasta el cauce del rio Turia.
-        Es por esto, que en el ayuntamiento de Valencia concedió permisos y
-        licencias a este edifico de 10 alturas, que iba a formar parte del
-        frontal de la futurística avenida del oeste. El Edificio de los Falleros
-        iba a ser el final ¡de la Avenida del oeste!
+      <div className="py-20 max-w-[1000px] flex flex-col gap-6 justify-center items-center">
+        <p>
+          Algunos carmelitanos, entre ellos muchos falleros y familiares de NJ,
+          se agruparon en una cooperativa surgida del seno de la Parroquia del
+          Carme o de la Santísima Cruz, con el fin de construir un nuevo
+          edificio que implicaría viviendas seguras y modernas (por ejemplo, con
+          lavabos, que no abundaban anteriormente) para sus socios. Esta
+          cooperativa fue la responsable del encargo y ejecución de las obras
+          bajo el seguimiento constante e interesado de todos sus socios. Fue
+          tal el ambiente de unión y trabajo de la construcción de este edificio
+          que alguno de los paletas se quedó a trabajar en el edificio como
+          conserje, el señor Eugenio, que falleció tras largos años de servicio
+          en la comunidad.
+        </p>
+        <div className="flex">
+          <Image src="/doc3.png" alt="documento" width={300} height={300} />
+        </div>
       </div>
       <div className="h-[500px] w-full bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/map-of-city.png')]"></div>
-      <div className="h-[calc(100vh-260px)] max-w-[1000px] flex items-center">
-        El Edificio de los Falleros se construyó con el fin loable, tras la
-        riada del 57 que anegó todas las primeras plantas de viviendas del
-        barrio del Carmen, de proporcionar a los socios de la cooperativa de un
-        hogar digno, higiénico, y económico. Esto es un fin que podríamos
-        perseguir aún hoy pero que dadas las condiciones de la vivienda en
-        nuestro barrio se hace imposible para las familias que siempre lo han
-        habitado y vivido.
+      <div className="pt-20 pb-10 max-w-[1000px] flex flex-col gap-10 justify-center items-center">
+        <p>
+          Y en 1965, tan solo 8 años tras la fatídica riada que anegó el centro
+          de valencia, se concedió cada una de las viviendas a los socios de la
+          cooperativa de viviendas de la santísima cruz, con un precio económico
+          de cuatro millones, cuatrocientas noventa y dos mil pesetas, unos
+          23.200 € del momento. Se repartieron en orden por sorteo de los
+          socios, en asamblea que tuvo lugar en los locales de la parroquia.
+          Cada uno de los vecinos, por estricto orden de sorteo fue eligiendo
+          piso y puerta en base a sus gustos e intereses… ¿Valió la pena? ¡Por
+          supuesto que sí! 20 familias del barrio del Carme, falleros, miembros
+          de su parroquia, vecinos, accedieron a unos hogares sanos, higiénicos,
+          y modernos…con baño en el interior de cada vivienda e incluso con uno
+          de los primeros ascensores del barrio el Carmen!.
+        </p>
+        <div className="flex">
+          <Image src="/doc4.png" alt="documento" width={500} height={300} />
+        </div>
       </div>
-      <div className="h-[500px] w-full bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/doc4.png')]"></div>
-      <div className="h-[calc(100vh-260px)] max-w-[1000px] flex items-center">
-        Y en 1965, tan solo 8 años tras la fatídica riada que anegó el centro de
-        valencia, se concedió cada una de las viviendas a los socios de la
-        cooperativa de viviendas de la santísima cruz, con un precio económico
-        de cuatro millones, cuatrocientas noventa y dos mil pesetas, unos 23.200
-        € del momento, ¿Valió la pena? ¡Por supuesto que sí! 20 familias del
-        barrio del Carme, falleros, miembros de su parroquia, vecinos,
-        accedieron a unos hogares sanos, higiénicos, y modernos…!incluso con uno
-        de los primeros ascensores del barrio el Carme!
-      </div>
-      <div className="h-[500px] w-full bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/doc3.png')]"></div>
-      <div className="h-[300px] flex flex-col items-center justify-center gap-4">
+      <div className="pb-20 flex flex-col items-center justify-center gap-4">
         <ButtonLink text="Conocer a los vecinos" href="/vecinos" />
       </div>
     </div>
