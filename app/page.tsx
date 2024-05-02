@@ -18,11 +18,12 @@ export default function Home() {
             histórico nunca llegó a realizarse debido a la negativa de varias
             familias adineradas cercanas al mercado central. No obstante, y tras
             las pérdidas que supuso la riada de 1957, 20 familias del barrio se
-            organizaron para construir una vivienda digna e "higiénica"
-            liderados por la parroquia de la Santísima Cruz, también conocida
-            como iglesia del Carmen. Esta nueva vivienda se alineó según la
-            reglamentación y planos urbanísticos de entonces y constituyó en el
-            barrio del Carmen un hito de modernidad y de cohesión del barrio.
+            organizaron para construir una vivienda digna e
+            &quot;higiénica&quot; liderados por la parroquia de la Santísima
+            Cruz, también conocida como iglesia del Carmen. Esta nueva vivienda
+            se alineó según la reglamentación y planos urbanísticos de entonces
+            y constituyó en el barrio del Carmen un hito de modernidad y de
+            cohesión del barrio.
           </p>
           <div className="flex gap-10">
             <Image
